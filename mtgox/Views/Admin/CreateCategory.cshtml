@@ -1,0 +1,21 @@
+﻿@model SmartNerd.Models.Admin.Category
+@{
+    ViewBag.Title = "Create Category";
+}
+<div id="productPage">
+    @using(Html.BeginForm("CreateCategory","Admin",FormMethod.Post,new { enctype = "multipart/form-data" })) {
+        <div>
+
+            <br /><br />
+            @Html.ValidationSummary()
+            Name: @Html.TextBoxFor(m => m.CategoryName,new { id = "categoryName" })
+
+            <br /><br />
+            Banner: <input type="file" name="file" />
+
+            <br /><br />
+            <input type="submit" value="Create" />
+        </div>
+    }
+    <div class="clear"></div>
+</div>
