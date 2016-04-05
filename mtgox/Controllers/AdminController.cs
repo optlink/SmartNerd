@@ -144,6 +144,24 @@ namespace SmartNerd.Controllers {
 
             foreach(var entry in entries) db.CategoryEntries.DeleteOnSubmit(entry);
 
+            var orderEntries = (from a in db.OrderProducts
+                                where a.ProductID == model.ProductID
+                                select a);
+
+            foreach(var orderEntry in orderEntries) db.OrderProducts.DeleteOnSubmit(orderEntry);
+
+            var orders = (from a in db.Orders
+                          join b in db.OrderProducts on a.OrderID equals b.OrderID
+                          where b.ProductID == model.ProductID
+                          select a);
+
+            foreach(var order in orders) {
+                var payment = db.Payments.SingleOrDefault(a => a.OrderID == order.OrderID);
+                if(payment != null) db.Payments.DeleteOnSubmit(payment); 
+
+                db.Orders.DeleteOnSubmit(order);
+            }
+
             var prod = db.Products.Single(a => a.ProductID == model.ProductID);
             db.Products.DeleteOnSubmit(prod);
 
