@@ -1,5 +1,17 @@
 ﻿body {
     padding-bottom: 20px;
+    /*color: dimgray;*/
+    background-color: darkgray;
+}
+
+td > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul > li {
+    text-align: center;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -7,7 +19,6 @@
     padding-left: 15px;
     padding-right: 15px;
 }
-
 
 /* styles for validation helpers */
 .field-validation-error {
@@ -52,18 +63,18 @@ input[type="checkbox"].input-validation-error {
 .clear {
     clear: both;
 }
-#newAddress
-{
+
+#newAddress {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 0 15px 15px 15px;
 }
-.divAddress .btn
-{
+
+.divAddress .btn {
     margin-top: 15px;
 }
-.divAddress
-{
+
+.divAddress {
     border: 1px solid #ddd;
     border-radius: 15px;
     display: inline-block;
@@ -72,10 +83,11 @@ input[type="checkbox"].input-validation-error {
     padding: 15px;
     width: 250px;
 }
-.table-address td:first-child
-{
+
+.table-address td:first-child {
     padding-right: 10px;
 }
+
 #saveAddress {
     margin-bottom: 10px;
 }
@@ -94,34 +106,35 @@ input[type="checkbox"].input-validation-error {
 #productEditPrice {
     width: 80px;
 }
-.prodQty
-{
+
+.prodQty {
     width: 30px;
 }
-#menuBanner
-{
+
+#menuBanner {
     height: auto;
     width: 100%;
 }
-#aboveNav
-{
-    background: -webkit-linear-gradient(top, #1D314C, #FFF);
+
+#aboveNav {
+    background: -webkit-linear-gradient(top, #1D314C, darkgray);
 }
-#menuListing img
-{
+
+#menuListing img {
     display: block;
     height: 150px;
     max-width: 100%;
 }
-#menuListing a
-{
+
+#menuListing a {
     display: block;
 }
+
 #menuListing div {
     padding-bottom: 15px;
     padding-top: 15px;
 }
-body > center
-{
+
+body > center {
     display: none;
 }
