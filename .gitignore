@@ -3,3 +3,5 @@
 mtgox/bin/
 mtgox/obj/
 packages/
+*.suo
+.vs/
