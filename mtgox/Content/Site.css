@@ -1,7 +1,17 @@
 ﻿body {
     padding-bottom: 20px;
+    background-color: darkgray;
 }
 
+a {
+    color: black;
+}
+a:hover {
+    color: pink;
+}
+table.order-table {
+    border:medium;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -105,7 +115,7 @@ input[type="checkbox"].input-validation-error {
 }
 #aboveNav
 {
-    background: -webkit-linear-gradient(top, #1D314C, #FFF);
+    background: -webkit-linear-gradient(top, #1D314C, #808080);
 }
 #menuListing img
 {
